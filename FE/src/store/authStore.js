@@ -42,7 +42,7 @@ const useAuthStore = create(
       async refreshToken() {
         try {
           let response = await axios.get(
-            "http://localhost:5000/auth/refreshToken"
+            "https://eccomerce-deploy.vercel.app/auth/refreshToken"
           );
           return response;
         } catch (error) {
@@ -66,7 +66,6 @@ const useAuthStore = create(
         try {
           set({ ischecking: true });
           let response = await axiosInstance.get("/auth/checkauth");
-          // console.log(response);
           set({ user: response.data });
         } catch (error) {
           set({ user: null });
