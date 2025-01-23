@@ -3,7 +3,7 @@ import useAuthStore from '../store/authStore';
 import { jwtDecode } from "jwt-decode"
 axios.defaults.withCredentials = true;
 let axiosInstance=axios.create({
-  baseURL: 'https://eccomerce-deploy-ttvg.vercel.app',
+  baseURL: 'https://eccomerce-deploy.vercel.app',
   withCredentials: true
 })
 

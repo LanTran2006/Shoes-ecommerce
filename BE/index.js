@@ -14,7 +14,7 @@ import { productModel } from './models/product.js';
 const app = express();
 
 app.use(cors({
-  origin: 'https://eccomerce-deploy.vercel.app',
+  origin: 'https://eccomerce-deploy-react.vercel.app',
   credentials: true,
 }))
 app.use(express.json())
