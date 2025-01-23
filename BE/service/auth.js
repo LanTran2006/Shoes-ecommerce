@@ -14,7 +14,7 @@ export function handleLogin(user, res) {
   let { accessToken, refreshToken } = generateToken(user);
   res.cookie("refreshToken",refreshToken,{
     httpOnly: true,
-    samesite: "strict", 
+    samesite: "strict",  
     maxAge: 7 * 24 * 60 * 60 * 1000
   });
   let { password, ...others } =user;
