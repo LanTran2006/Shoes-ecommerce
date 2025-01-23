@@ -3,7 +3,7 @@ import "./cart.css";
 import axios from "axios";
 import cartStore from "../../store/cartStore";
 import Checkout from "./checkout";
-
+import {Link} from 'react-router'
 function Cart() {
     const {
         cart: products,
@@ -188,7 +188,7 @@ function Cart() {
                         <p id="empty_content">I'm so hungry now feed me please :((</p>
                         <button id="empty-btn">
                            
-                              <a href="/products">Go to products</a>
+                              <Link to="/products">Go to products</Link>
                      
                             
                         </button>
