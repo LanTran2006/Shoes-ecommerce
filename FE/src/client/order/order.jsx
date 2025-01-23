@@ -11,7 +11,7 @@ function OrderCard(orders){
       currency: "VND",
     }).format(money);
   };
-
+ 
   return ( <div>
     {orders.orders.map((order, index) => {
      
