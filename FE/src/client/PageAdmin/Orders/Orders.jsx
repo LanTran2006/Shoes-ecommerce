@@ -32,7 +32,7 @@ function OrderList(orders) {
               <p className="font-semibold">Date: {new Date(order.createdAt).toLocaleDateString()}</p>
             </div>
 
-            {order.items.map((item, index) => {
+            {order?.items?.map((item, index) => {
               // product card
               return (
                 <div key={index}>
