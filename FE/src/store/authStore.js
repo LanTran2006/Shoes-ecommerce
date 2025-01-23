@@ -42,7 +42,7 @@ const useAuthStore = create(
       async refreshToken() {
         try {
           let response = await axios.get(
-            "https://eccomerce-deploy.vercel.app/auth/refreshToken"
+            "http://localhost:5000/auth/refreshToken"
           );
           return response;
         } catch (error) {
