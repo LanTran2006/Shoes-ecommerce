@@ -1,7 +1,6 @@
 import { NavLink, Link } from "react-router";
 import useAuthStore from "../../store/authStore";
 import "./Header.css";
-import { ToastContainer } from "react-toastify";
 
 
 
@@ -67,7 +66,6 @@ function Header() {
          
         </nav>
       </div>
-      <ToastContainer />
     </header>
   );
 }
