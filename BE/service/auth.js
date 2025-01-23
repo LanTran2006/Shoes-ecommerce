@@ -65,8 +65,9 @@ export async function handlechangePassword(req) {
 export function handleRefreshToken(user, res) {
   let { accessToken, refreshToken } = generateToken(user);
   res.cookie("refreshToken",refreshToken,{
-    httpOnly: true,
-    samesite: "strict", 
+   httpOnly: true, // Prevent client-side access
+    secure: true,   // Required for HTTPS
+    sameSite: 'None', // For cross-origin cookies
     maxAge: 7 * 24 * 60 * 60 * 1000
   });
   return { accessToken};
