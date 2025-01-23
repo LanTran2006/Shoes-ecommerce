@@ -32,8 +32,8 @@ const useAuthStore = create(
             email,
             password,
           });
-          navigate("/login");
           notifySuccess("account created successfully");
+          navigate("/login");
         } catch (error) {
           console.log(error);
           notifyError(error.response?.data?.message);
