@@ -5,13 +5,13 @@ export function generateToken(user) {
         id,
         role: user.role
     },process.env.SECRET_KEY,{
-        expiresIn: '40s'
+        expiresIn: '24h'
     })
     let refreshToken=jwt.sign({
         id,
         role: user.role
     },process.env.SECRET_KEY,{
-        expiresIn: '1h'
+        expiresIn: '2d'
     })
     return {accessToken,refreshToken}
 }
